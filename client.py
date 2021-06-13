@@ -12,10 +12,11 @@ def worker(n: int, name_param: str):
     stub = hello_pb2_grpc.GreeterStub(channel)
     name = hello_pb2.HelloRequest(name=name_param)
 
-    sleep(randint(500, 750) / 100)
+    sleep(randint(100, 750) / 100)
     response = stub.SayHello(name)
 
     print(f"[{n}] {response.message}")
+    channel.close()
 
 
 def main():

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "grpc-example"
+version = "0.1.0"
+description = "A simple example how to use grpc to handle with information accross microservices."
+authors = ["Everton Tomalok <evertontomalok123@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+grpcio = "^1.38.0"
+protobuf = "^3.17.3"
+
+[tool.poetry.dev-dependencies]
+grpcio-tools = "^1.38.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
